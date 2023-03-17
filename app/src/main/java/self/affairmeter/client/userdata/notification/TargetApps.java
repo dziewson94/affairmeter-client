@@ -7,7 +7,9 @@ public enum TargetApps {
     INSTAGRAM("instagram.android"),
     TELEGRAM("telegram.messenger"),
     SNAPCHAT("com.snapchat.android"),
+    CHROME("com.android.chrome"),
     SYSTEM("android");
+
 
     private String appPackage;
 

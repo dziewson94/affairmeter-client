@@ -2,11 +2,22 @@ package self.affairmeter.client.userdata.notification;
 
 public class UserNotification {
 
+
+    private int userId;
     private String message;
     private String title;
     private String packageName;
     private String time;
+
     private int id;
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
 
     private String appName;
 
@@ -71,6 +82,7 @@ public class UserNotification {
         return id;
     }
 
+
     @Override
     public String toString() {
         return "{\"UserNotification\":{"
@@ -81,5 +93,17 @@ public class UserNotification {
                 + ", \"id\":\"" + id + "\""
                 + ", \"appName\":\"" + appName + "\""
                 + "}}";
+    }
+
+
+    public String toJSONString() {
+        return "{"
+                + "\"message\":\"" + message + "\""
+                + ", \"title\":\"" + title + "\""
+                + ", \"packageName\":\"" + packageName + "\""
+                + ", \"time\":\"" + time + "\""
+                + ", \"id\":\"" + id + "\""
+                + ", \"appName\":\"" + appName + "\""
+                + "}";
     }
 }
